@@ -15,12 +15,12 @@ struct SideBarView: View {
 
     var tagFilters: [Filter] {
         tags.map { tag in
-            Filter(id: tag.id ?? UUID(), name: tag.name ?? "No Name", icon: "tag", tag: tag)
+            Filter(id: tag.tagID ?? UUID(), name: tag.tagName ?? "No Name", icon: "tag", tag: tag)
         }
     }
 
     var body: some View {
-        List(selection: $dataController.selectedFiler) {
+        List(selection: $dataController.selectedFilter) {
             Section("Smart Filters") {
                 ForEach(smartFilters) { filter in
                     NavigationLink(value: filter) {
@@ -29,20 +29,28 @@ struct SideBarView: View {
                 }
             }
             Section("Tags") {
-                ForEach(tagFilters) {filter in
+                ForEach(tagFilters) { filter in
                     NavigationLink(value: filter) {
                         Label(filter.name, systemImage: filter.icon)
+                            .badge(filter.tag?.tagActiveIssues.count ?? 0)
                     }
                 }
+                    .onDelete(perform: delete)
             }
         }
-        .toolbar {
-            Button{
+            .toolbar {
+            Button {
                 dataController.deleteAll()
                 dataController.createSampleData()
             } label: {
                 Label("ADD SAMPLES", systemImage: "flame")
             }
+        }
+    }
+    func delete(_ offsets: IndexSet) {
+        for offset in offsets {
+            let item = tags[offset]
+            dataController.delete(item)
         }
     }
 }

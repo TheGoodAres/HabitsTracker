@@ -16,6 +16,11 @@
 		D4A43AA22AD9F7E5003D3799 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A43AA12AD9F7E5003D3799 /* SideBarView.swift */; };
 		D4A43AA42AD9F7EC003D3799 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A43AA32AD9F7EC003D3799 /* DetailView.swift */; };
 		D4A43AA62AD9F9D2003D3799 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A43AA52AD9F9D2003D3799 /* Filter.swift */; };
+		D4A43AA82ADA7805003D3799 /* Issue-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A43AA72ADA7805003D3799 /* Issue-CoreDataHelpers.swift */; };
+		D4A43AAA2ADA79B5003D3799 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A43AA92ADA79B5003D3799 /* Tag-CoreDataHelpers.swift */; };
+		D4A43AAC2ADAFB9F003D3799 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A43AAB2ADAFB9F003D3799 /* IssueRow.swift */; };
+		D4D2EA7C2ADBD611000FBFB3 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EA7B2ADBD611000FBFB3 /* IssueView.swift */; };
+		D4D2EA7E2ADBD61A000FBFB3 /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D2EA7D2ADBD61A000FBFB3 /* NoIssueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		D4A43AA12AD9F7E5003D3799 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		D4A43AA32AD9F7EC003D3799 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D4A43AA52AD9F9D2003D3799 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		D4A43AA72ADA7805003D3799 /* Issue-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D4A43AA92ADA79B5003D3799 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D4A43AAB2ADAFB9F003D3799 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
+		D4D2EA7B2ADBD611000FBFB3 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		D4D2EA7D2ADBD61A000FBFB3 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +75,17 @@
 			children = (
 				D4A43AA02AD9E657003D3799 /* Info.plist */,
 				D4A43A9E2AD9DC30003D3799 /* DataController.swift */,
+				D4D2EA7B2ADBD611000FBFB3 /* IssueView.swift */,
+				D4D2EA7D2ADBD61A000FBFB3 /* NoIssueView.swift */,
 				D4A43A8C2AD9D74A003D3799 /* HabitsTrackerApp.swift */,
 				D4A43A8E2AD9D74A003D3799 /* ContentView.swift */,
+				D4A43AAB2ADAFB9F003D3799 /* IssueRow.swift */,
 				D4A43AA12AD9F7E5003D3799 /* SideBarView.swift */,
 				D4A43AA52AD9F9D2003D3799 /* Filter.swift */,
 				D4A43AA32AD9F7EC003D3799 /* DetailView.swift */,
 				D4A43A9B2AD9D878003D3799 /* main.xcdatamodeld */,
+				D4A43AA72ADA7805003D3799 /* Issue-CoreDataHelpers.swift */,
+				D4A43AA92ADA79B5003D3799 /* Tag-CoreDataHelpers.swift */,
 				D4A43A902AD9D74D003D3799 /* Assets.xcassets */,
 				D4A43A922AD9D74D003D3799 /* HabitsTracker.entitlements */,
 				D4A43A932AD9D74D003D3799 /* Preview Content */,
@@ -157,11 +172,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A43AA62AD9F9D2003D3799 /* Filter.swift in Sources */,
+				D4A43AAA2ADA79B5003D3799 /* Tag-CoreDataHelpers.swift in Sources */,
 				D4A43A8F2AD9D74A003D3799 /* ContentView.swift in Sources */,
+				D4A43AA82ADA7805003D3799 /* Issue-CoreDataHelpers.swift in Sources */,
 				D4A43AA42AD9F7EC003D3799 /* DetailView.swift in Sources */,
 				D4A43A9F2AD9DC30003D3799 /* DataController.swift in Sources */,
 				D4A43A9D2AD9D878003D3799 /* main.xcdatamodeld in Sources */,
 				D4A43AA22AD9F7E5003D3799 /* SideBarView.swift in Sources */,
+				D4D2EA7C2ADBD611000FBFB3 /* IssueView.swift in Sources */,
+				D4D2EA7E2ADBD61A000FBFB3 /* NoIssueView.swift in Sources */,
+				D4A43AAC2ADAFB9F003D3799 /* IssueRow.swift in Sources */,
 				D4A43A8D2AD9D74A003D3799 /* HabitsTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

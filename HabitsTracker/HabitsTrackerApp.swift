@@ -10,18 +10,23 @@ import SwiftUI
 @main
 struct HabitsTrackerApp: App {
     @StateObject var dataController: DataController = DataController()
-    
+    @Environment(\.scenePhase) var scenePhase
     var body: some Scene {
         WindowGroup {
-            NavigationSplitView{
+            NavigationSplitView {
                 SideBarView()
-            }content: {
+            } content: {
                 ContentView()
             } detail: {
                 DetailView()
             }
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .environmentObject(dataController)
+                .onChange(of: scenePhase) {
+                if scenePhase != .active {
+                    dataController.save()
+                }
+            }
         }
     }
 }
